@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    
+    nav { 
+        display: flex; justify-content: space-between; align-items: center; 
+        padding: 1.5rem 5%; background: #ffffff; border-bottom: 1px solid #eee;
+    }
+
+    .logo { font-weight: 700; font-size: 1.5rem; letter-spacing: -1px; }
+
+    .menu { display: flex; list-style: none; }
+    .menu li { margin-left: 2rem; cursor: pointer; color: #555; transition: 0.3s; }
+    .menu li:hover { color: #000; }
+
+    .hamburger { 
+        display: none; cursor: pointer; font-size: 1.8rem; 
+        user-select: none; 
+    }
+
+    @media (max-width: 768px) {
+        .hamburger { display: block; }
+        .menu { 
+            display: none; flex-direction: column; width: 100%; 
+            position: absolute; top: 70px; left: 0; 
+            background: #fff; padding: 2rem 0; border-bottom: 1px solid #eee;
+            box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+        }
+        .menu.active { display: flex; }
+        .menu li { margin: 1rem 0; text-align: center; }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">SHIKSHA STUDIO</div>
+    <div class="hamburger" id="hamburger">☰</div>
+    <ul class="menu" id="menu">
+        <li>Work</li>
+        <li>Studio</li>
+        <li>Services</li>
+        <li>Contact</li>
+    </ul>
+</nav>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
