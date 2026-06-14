@@ -22,3 +22,11 @@ A modern, sleek, and fully responsive navigation bar designed to enhance user ex
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/ShikshaVerma-28/Navigation-Bar.git](https://github.com/ShikshaVerma-28/Navigation-Bar.git)
+
+
+2.**Navigate to the directory:**
+```bash
+cd Navigation-Bar
+```
+3.**Run the project:**
+Open index.html directly in your browser.
